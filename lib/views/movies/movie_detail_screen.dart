@@ -107,7 +107,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
           leading: Padding(
             padding: const EdgeInsets.only(left: 13),
             child: GestureDetector(
-              onTap: () => Navigator.of(context).pop(),
+              onTap: () => context.pop(),
               child: Container(
                 width: 30,
                 height: 30,
@@ -240,7 +240,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                   top: MediaQuery.of(context).padding.top + 16,
                   left: 20,
                   child: GestureDetector(
-                    onTap: () => Navigator.of(context).pop(),
+                    onTap: () => context.pop(),
                     child: Container(
                       width: 40,
                       height: 40,
@@ -375,8 +375,8 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
               isLoadingVideos
                   ? 'Loading...'
                   : hasTrailer
-                  ? 'Watch Trailer'
-                  : 'No Trailer',
+                      ? 'Watch Trailer'
+                      : 'No Trailer',
               style: GoogleFonts.poppins(
                 fontSize: 14,
                 fontWeight: FontWeight.w600,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../core/constants/app_colors.dart';
@@ -57,10 +58,10 @@ class _MoviePlayerScreenState extends State<MoviePlayerScreen> {
     // Restore system UI
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
-    // Restore portrait orientation
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+    // ✅ Allow all orientations again
+    SystemChrome.setPreferredOrientations(DeviceOrientation.values);
 
-    Navigator.of(context).pop();
+    context.pop();
   }
 
   @override
@@ -110,7 +111,6 @@ class _MoviePlayerScreenState extends State<MoviePlayerScreen> {
                   },
                   onEnded: (metaData) {
                     debugPrint('Video ended: ${metaData.videoId}');
-                    _closePlayer();
                   },
                 ),
                 builder: (context, player) {

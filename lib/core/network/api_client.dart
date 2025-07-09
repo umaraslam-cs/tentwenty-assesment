@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import '../constants/app_urls.dart';
-import '../storage/shared_prefs_handler.dart';
 
 /// Singleton API client using Dio
 class ApiClient {
@@ -30,7 +29,6 @@ class ApiClient {
         },
         onError: (DioException e, handler) {
           // Centralized error handling
-          print('Dio error: ${e.message}');
           return handler.next(e);
         },
       ),

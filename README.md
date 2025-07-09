@@ -2,6 +2,12 @@
 
 A Flutter application demonstrating movie browsing with mvvm architecture, offline-first approach, and modern development practices.
 
+### Android Demo GIF
+<img src="https://raw.githubusercontent.com/umaraslam-cs/tentwenty-assesment/main/Android Demo.gif" width="300"/>
+
+### iOS Demo GIF
+<img src="https://raw.githubusercontent.com/umaraslam-cs/tentwenty-assesment/main/iOS Demo.gif" width="300"/>
+
 ## Features
 
 - Browse popular movies with detailed information
